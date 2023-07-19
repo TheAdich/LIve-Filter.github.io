@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("photo-1542831371-29b0f74f9713.avif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    filter: blur(0px);
+}
+
+.container {
+    margin-top: 80px;
+    background-color: white;
+    height: 420px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: -4px -3px 5px rgb(240, 240, 115), 4px 3px 5px rgb(234, 188, 91);
+    border-radius: 10px;
+}
+
+.top-header {
+    background-color: #54a1ff;
+    padding: 8px 5px;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.user-space {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.top-header p {
+    text-align: center;
+}
+
+.top-header input {
+    width: 80%;
+    display: block;
+    margin: 0px auto;
+    margin-top: 10px;
+    outline: none;
+    position: relative;
+}
+
+.search:focus {
+    border: 0.9px solid rgb(105, 215, 240);
+    box-shadow: 5px 4px 2px grey;
+    padding: 2px;
+}
+
+.user-info-box {
+    list-style: none;
+    padding: 3px 20px;
+    text-align: center;
+}
+
+.user-info-box li {
+    padding: 2px 0px;
+    font-family: 'Lora', serif;
+}
+
+.user-info-box.hide {
+    display: none;
+}
+
+
+/**css to name of web-app**/
+
+h1 {
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    width: fit-content;
+    margin: 0px auto;
+    white-space: nowrap;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    border-right: 2px solid #e6edf0;
+    color: #e6edf0;
+    overflow: hidden;
+    animation: animate 3s alternate infinite;
+}
+
+@keyframes animate {
+    0%,
+    20%,
+    100% {
+        width: 0;
+    }
+    80%,
+    90% {
+        width: 100%;
+    }
+}
